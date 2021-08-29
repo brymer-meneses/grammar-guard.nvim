@@ -8,7 +8,7 @@ M.setup = function()
 
 	configs.grammar_guard = {
 		default_config = {
-			cmd = { bin_path },
+			cmd = { bin_path, "--input-documents=" .. vim.api.nvim_buf_get_name(0) },
 			filetypes = { "tex", "bib", "markdown" },
 			root_dir = function(filename)
 				return util.path.dirname(filename)
