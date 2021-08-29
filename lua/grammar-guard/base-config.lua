@@ -29,6 +29,10 @@ M.setup = function()
                 To install, download the latest [release](https://github.com/valentjn/ltex-ls/releases) and ensure `ltex-ls` is on your path.
 
                 ]],
+
+			default_config = {
+				root_dir = "vim's starting directory",
+			},
 		},
 	}
 end
