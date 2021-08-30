@@ -9,7 +9,7 @@ M.setup = function()
 	configs.grammar_guard = {
 		default_config = {
 			cmd = { bin_path },
-			filetypes = { "tex", "bib", "markdown" },
+			filetypes = { "tex", "bib", "markdown", "latex" },
 			root_dir = function(filename)
 				return util.path.dirname(filename)
 			end,
