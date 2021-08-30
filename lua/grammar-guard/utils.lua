@@ -16,7 +16,9 @@ end
 M._check_ltex_installation = function()
 	local install_path = require("grammar-guard.vars").install_path
 	if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-		vim.notify("[grammar-guard] The ltex language server has not been installed.")
+		return false
+	else
+		return true
 	end
 end
 
