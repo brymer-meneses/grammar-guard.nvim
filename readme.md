@@ -26,7 +26,7 @@ This plugin is currently on alpha stage, expect some changes to the API.
 ## Installation
 To install `grammar-guard.nvim` you need to install it with your preferred neovim package manager.
 
-Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
+Using [packer.nvim](https://github.com/wbthomason/packer.nvim):
 ```lua
 use {
     "brymer-meneses/grammar-guard.nvim",
@@ -67,4 +67,6 @@ require("lspconfig").grammar_guard.setup({
 })
 ```
 
+## Disclaimer:
+This plugin is *largely based* on the following [pull request](https://github.com/neovim/nvim-lspconfig/pull/863).
 
