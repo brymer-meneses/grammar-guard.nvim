@@ -9,13 +9,14 @@ M.setup = function()
 	configs.grammar_guard = {
 		default_config = {
 			cmd = { bin_path },
-			filetypes = { "tex", "bib", "markdown", "latex" },
+			filetypes = { "tex", "bib", "markdown" },
 			root_dir = function(filename)
 				return util.path.dirname(filename)
 			end,
 			settings = {
 				ltex = {
 					checkFrequency = "edit",
+					enabled = { "latex", "markdown", "bib" },
 				},
 			},
 		},
