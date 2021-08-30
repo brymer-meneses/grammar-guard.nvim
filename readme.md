@@ -43,7 +43,7 @@ Then, integrate the following to your neovim configuration.
 require("grammar-guard").init()
 ```
 
-After than, you should tune the LSP configuration to your liking.
+After that, you should tune the LSP configuration to your liking.
 Example Configuration:
 ```lua
 -- setup LSP config
