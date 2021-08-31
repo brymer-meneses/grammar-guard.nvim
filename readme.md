@@ -15,6 +15,8 @@ check your grammar.
 
 It uses the built-in Neovim LSP to provide feedback while you're writing your LaTeX or Markdown Documents.
 
+![Demo](assets/demo.gif)
+
 ## Features
 * Easy installer, just run `:GrammarInstall` from Neovim.
 * LaTeX, Markdown, or plain text grammar checking.
@@ -44,6 +46,8 @@ require("grammar-guard").init()
 ```
 
 After that, you should tune the LSP configuration to your liking.
+
+
 Example Configuration:
 ```lua
 -- setup LSP config
