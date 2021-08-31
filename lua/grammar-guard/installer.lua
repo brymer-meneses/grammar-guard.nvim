@@ -18,7 +18,7 @@ M.install_ltex_ls = function()
       platform="linux"
       ;;
       darwin)
-      platform="macos"
+      platform="mac"
       ;;
 
       esac
