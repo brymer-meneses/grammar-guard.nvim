@@ -6,46 +6,61 @@
 \___/_/  \_,_/_/_/_/_/_/_/\_,_/_/    \___/\_,_/\_,_/_/  \_,_/  
                                                                
 ```
-                                                                                                             
 
-## Introduction
-Grammar Guard is a [Neovim](https://github.com/neovim/neovim) plugin that uses [ltex-ls](https://github.com/valentjn/ltex-ls) to 
-check your grammar.
+## 🚧 Status 
 
-It uses the built-in Neovim LSP to provide feedback while you're writing your LaTeX or Markdown Documents.
+This plugin is currently on alpha stage, expect some changes to the API.
+
+## ℹ️ Introduction
+
+Grammar Guard is a [Neovim](https://github.com/neovim/neovim) plugin that uses [ltex-ls](https://github.com/valentjn/ltex-ls) to check your grammar.
+
+It uses the built-in Neovim LSP to provide feedback while you're writing your L<big><sup>A</sup></big>T<big><sub>E</sub></big>X or Markdown Documents.
 
 ![Demo](assets/demo.gif)
 
-## Features
+## 🌟 Features
 * Easy installer, just run `:GrammarInstall` from Neovim.
-* LaTeX, Markdown, or plain text grammar checking.
+* L<big><sup>A</sup></big>T<big><sub>E</sub></big>X, Markdown or plain text grammar checking.
 * Integrates well with [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
+* Using [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer) for ltex install.
+* Work properly on Windows, Linux, MacOS.
 
-## Status
-This plugin is currently on alpha stage, expect some changes to the API.
+## ⚡️ Requirements
 
-## Installation
++ Neovim >= 0.5.0
+
+## 📦 Installation
+
+Install via your favorite package manager:
+
 To install `grammar-guard.nvim` you need to install it with your preferred neovim package manager.
 
-Using [packer.nvim](https://github.com/wbthomason/packer.nvim):
+#### [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
 ```lua
 use {
     "brymer-meneses/grammar-guard.nvim",
-    requires = "neovim/nvim-lspconfig"
+    requires = {
+        "neovim/nvim-lspconfig",
+        "williamboman/nvim-lsp-installer"
+    }
 }
 ```
 
-## Setup
-First you need to run `:GrammarInstall` to install the ltex language server.
-Then, integrate the following to your neovim configuration.
+Run `:GrammarInstall` or with [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer) `:LspInstall ltex`
+
+Run `:LspInstallInfo` for more information about installed servers.
+
+## ⚙️ Setup
+
+Integrate the following to your neovim configuration:
 
 ```lua
 -- hook to nvim-lspconfig
 require("grammar-guard").init()
 ```
-
 After that, you should tune the LSP configuration to your liking.
-
 
 Example Configuration:
 ```lua
@@ -69,7 +84,6 @@ require("lspconfig").grammar_guard.setup({
 	},
 })
 ```
-
 ## Disclaimer:
 This plugin is *largely based* on the following [pull request](https://github.com/neovim/nvim-lspconfig/pull/863).
 
