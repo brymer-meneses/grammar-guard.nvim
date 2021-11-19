@@ -1,13 +1,5 @@
 local M = {}
 local is_ltex_installed = require("grammar-guard.utils")._check_ltex_installation()
-M.install = function()
-	if is_ltex_installed then
-		vim.notify("[grammar-guard] The ltex language server has already been installed.")
-		return
-	end
-	-- install ltex-lsp server
-	require("grammar-guard.installer").install_ltex_ls()
-end
 
 M.init = function()
 	-- check if ltex-ls is installed

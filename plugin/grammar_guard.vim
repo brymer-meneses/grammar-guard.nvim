@@ -5,5 +5,5 @@ if !has('nvim-0.5')
   finish
 endif
 
-command! GrammarInstall lua require("grammar-guard").install()
+command GrammarInstall LspInstall ltex
 
