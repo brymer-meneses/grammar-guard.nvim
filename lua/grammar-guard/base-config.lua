@@ -1,8 +1,8 @@
 local M = {}
 
 M.setup = function()
-	local configs = require("lspconfig/configs")
-	local util = require("lspconfig/util")
+	local configs = require("lspconfig.configs")
+	local util = require("lspconfig.util")
 
 	local bin_path = require("grammar-guard.vars").bin_path
 
