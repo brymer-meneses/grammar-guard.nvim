@@ -20,10 +20,9 @@ It uses the built-in Neovim LSP to provide feedback while you're writing your L<
 ![Demo](assets/demo.gif)
 
 ## 🌟 Features
-* Easy installer, just run `:GrammarInstall` from Neovim.
+* Easy installer, just run `:GrammarInstall` from Neovim (requires [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)).
 * L<big><sup>A</sup></big>T<big><sub>E</sub></big>X, Markdown or plain text grammar checking.
 * Integrates well with [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
-* Using [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer) for ltex install.
 * Work properly on Windows, Linux, MacOS.
 
 ## ⚡️ Requirements
@@ -66,6 +65,7 @@ Example Configuration:
 ```lua
 -- setup LSP config
 require("lspconfig").grammar_guard.setup({
+  cmd = { '/path/to/ltex-ls' }, -- add this if you install ltex-ls yourself
 	settings = {
 		ltex = {
 			enabled = { "latex", "tex", "bib", "markdown" },

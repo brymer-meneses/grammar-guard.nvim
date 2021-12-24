@@ -14,6 +14,9 @@ M.read_files = function(files)
 end
 
 M._check_ltex_installation = function()
+  if vim.fn.executable('ltex-ls') == 1 then
+    return true
+  end
 	local install_path = require("grammar-guard.vars").install_path
 	if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 		return false
