@@ -9,7 +9,9 @@
 
 ## 🚧 Status 
 
-This plugin is currently on alpha stage, expect some changes to the API.
+This plugin is archived. It was created when there wasn't an easy way to
+install the `ltex` language server, prefer using [mason.nvim](https://github.com/williamboman) instead.
+
 
 ## ℹ️ Introduction
 
